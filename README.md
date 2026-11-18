@@ -1,16 +1,22 @@
-# React + Vite
+# QueueLess — Smart Campus Queue Management System
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+QueueLess eliminates physical waiting lines across campus service counters (College Office, Canteen, Library, Accounts Section, and Lab Equipment) with real-time ticket generation, wait-time prediction, crowd indicators, and staff counter controls.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **Student Portal:** Join open queues, receive sequential counter tickets (`A001`, `B001`, etc.), track live queue position, view estimated wait times, and get smart alternative counter recommendations.
+- **Staff Portal:** View live system statistics, call next waiting students, mark active services completed, and open/close counters dynamically.
+- **Wait-Time Prediction & Crowd Engine:** Calculates wait times from live queue depth and average service duration, classifying crowd levels (`Low`, `Moderate`, `High`).
+- **Persistent State:** Automatically saves queue and ticket states to `localStorage` across page reloads.
 
-## React Compiler
+## Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Frontend:** React (Vite), Lucide React Icons
+- **State & Logic:** Custom React Hooks (`useQueues`), modular prediction & queue helper utilities
 
-## Expanding the ESLint configuration
+## Getting Started
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```bash
+npm install
+npm run dev
+```
